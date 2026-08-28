@@ -22,12 +22,10 @@ Desktop MATLAB (does not work in MATLAB Online)
 `FCEA2.exe`, `thermo.lib`, and `trans.lib` in the same folder as `inp_creator.m`
 You may call the function from anywhere on the MATLAB path. The executable and libraries must still sit next to the wrapper (or in `pwd` when it runs).
 ---
-
 Call
 ```matlab
 inp_creator(T, P, u1)    % T [K], P [Pa], u1 [m/s]
 ```
-
 Example:
 ```matlab
 inp_creator(300, 2660, 15623.5);
@@ -35,18 +33,15 @@ inp_creator(300, 2660, 15623.5);
 ---
 Pre-shock composition
 Default is dry air. These lines are written into the `.inp` `reac` block:
-
 ```matlab
 fprintf(fid,'  name O2   mole=0.2095\n');
 fprintf(fid,'  name N2   mole=0.7808\n');
 fprintf(fid,'  name Ar   mole=0.0093\n');
 fprintf(fid,'  name CO2  mole=0.0004\n\n');
-
 ```
 Swap species / mole fractions for any other mixture. Number of components is not limited.
 Keep the CEA wording and spacing (`name`, two spaces, species, `mole=`). Do not change the token layout on those lines.
 ---
-
 Output sheets
 Sheet	Contents
 `InitialGAS`	Pre-shock state (P converted to Pa)
