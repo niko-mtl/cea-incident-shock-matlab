@@ -1,8 +1,10 @@
 # cea-incident-shock-matlab
 (please open in Code) 
-MATLAB wrapper script for NASA CEA (FCEA2) to build the input decks for equilibrium and ionized gases, run the solver, and output the Initial GAS, Shocked GAS, and mole fractions to Excel files. (Matlab + Fortran ) 
+MATLAB wrapper script for NASA CEA (FCEA2) to build the input decks for equilibrium and ionized gases, run the solver, and output the Initial GAS, Shocked GAS, and mole fractions to Excel files. (Matlab + Fortran) 
 
 You need to install fortran alongisde matlab.
+You need to drop all these files in the same folder. However, you can call this function from anywhere in your repository. It does not work with web version of matlab 
+
 Then call this function from another matlab file specifying the initial Temperature, Pressure and the shockwave speed 
 
 
