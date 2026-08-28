@@ -11,7 +11,7 @@ function [] = inp_creator(T,P,u1)
 % u1 = 8500;             % Speed in m/s
 
 %% ---- File names ----
-inpBase = 'webmatch_modified';   % base filename (no extension)
+inpBase = 'data_file';   % base filename (no extension)
 inpFile = [inpBase '.inp'];      % full file name with extension
 
 %% ---- Convert pressure (Pa -> bar) ----
@@ -25,7 +25,7 @@ if fid<0
     error('Cannot open %s for writing.', inpFile);
 end
 
-fprintf(fid,'prob case=webmatch  shock  incd  equilibrium  ions\n');
+fprintf(fid,'prob case=data file  shock  incd  equilibrium  ions\n');
 fprintf(fid,'p,bar=%.6f\n', P_bar);
 fprintf(fid,'t,k=%g\n', T);
 fprintf(fid,'u1=%g\n\n', u1);
