@@ -1,0 +1,14 @@
+prob case=webmatch  shock  incd  equilibrium  ions
+p,bar=0.026600
+t,k=300
+u1=1388.75
+
+reac
+  name O2   mole=0.2095
+  name N2   mole=0.7808
+  name Ar   mole=0.0093
+  name CO2  mole=0.0004
+
+outp siunits debug
+trace=1.0e-9
+end
